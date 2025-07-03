@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+    <header id="header-inicial">
+  <h1>Mi página de presentación</h1>
+</header>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Página Personal</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+  <script>
+  function mostrarSeccion(id) {
+    const secciones = document.querySelectorAll('main section');
+    secciones.forEach(seccion => {
+      seccion.classList.remove('visible');
+      seccion.style.display = 'none';
+    });
+
+    const activa = document.getElementById(id);
+    if (activa) {
+      activa.style.display = 'block';
+      void activa.offsetWidth;
+      activa.classList.add('visible');
+    }
+
+    // Oculta el header después de cambiar de sección
+    const headerInicial = document.getElementById('header-inicial');
+    if (id !== 'quien-soy' && headerInicial) {
+      headerInicial.style.display = 'none';
+    }
+  }
+
+  // Mostrar sección por defecto al cargar
+  window.onload = () => {
+    mostrarSeccion('quien-soy');
+  };
+</script>
+
+
+
+<body>
+  <div class="container">
+    <nav class="sidebar">
+      <h2>Menu</h2>
+      <ul>
+  <li><a href="#" onclick="mostrarSeccion('quien-soy')">Quién Soy</a></li>
+  <li><a href="#" onclick="mostrarSeccion('educacion')">Mi Educación</a></li>
+  <li><a href="#" onclick="mostrarSeccion('metas')">Mis Metas</a></li>
+  <li><a href="#" onclick="mostrarSeccion('intereses')">Mis Intereses</a></li>
+  <li><a href="#" onclick="mostrarSeccion('habilidades')">Mis Habilidades</a></li>
+</ul>
+
+    </nav>
+
+    <main class="content">
+     <section id="quien-soy" class="hero-section">
+  <div class="header-info animado">
+    <h1>Joel Gómez López</h1>
+    <img src="4b03bbd3-2a92-4e72-abfe-9f0122205b02.JPG" alt="Mi foto" class="perfil-img">
+    <h3 class="subtitulo">¿Quién soy?</h3>
+    <p class="descripcion mejorada">
+      Soy una persona que valora profundamente el aprendizaje continuo y el crecimiento personal. Me gusta enfrentar retos con determinación y encontrar soluciones prácticas a los problemas que se presentan en el día a día. Disfruto trabajar con otras personas porque creo que las mejores ideas surgen cuando se combinan la creatividad, el esfuerzo en equipo y la pasión por construir algo que importe.  
+      <br><br>
+      Actualmente vivo en Xalapa y estudio en la Universidad Anáhuac, donde he encontrado el espacio ideal para desarrollar tanto mi intelecto como mi visión emprendedora. Me considero una persona inteligente, muy motivada y con una fuerte capacidad para mantener el enfoque incluso en los momentos más desafiantes.  
+      <br><br>
+      Me encanta compartir momentos con mis amigos, crecer junto a ellos y rodearme de personas que también sueñan en grande. Soy alguien determinado, con metas claras y el compromiso absoluto de transformar mis ideas en realidades que dejen huella.
+    </p>
+  </div>
+</section>
+
+
+
+<section id="educacion">
+  <h1>Mi Educación</h1>
+
+  <!-- Tarjeta principal sobre la educación -->
+<div class="card-educacion pro">
+  <h2>Formación Académica</h2>
+  <p class="texto-educacion">
+    Durante mi formación académica he desarrollado habilidades tanto técnicas como creativas. Actualmente estudio la carrera de <strong>Finanzas y Contaduría Pública</strong> en la <strong>Universidad Anáhuac Xalapa</strong>, donde he encontrado una sólida base para comprender los negocios desde una perspectiva estratégica.
+    <br><br>
+    Previamente estudié un año y medio en el Tecnológico de Monterrey, campus Puebla, en la carrera de Ingeniería en Tecnologías Computacionales, donde adquirí conocimientos fundamentales en programación, lógica computacional y desarrollo digital.
+    <br><br>
+    Gracias a esta combinación de experiencias, he aprendido a construir soluciones digitales que van desde sitios web hasta plataformas interactivas, siempre buscando unir el aprendizaje teórico con la aplicación práctica a través de proyectos reales. Actualmente, me encuentro enfocado en mejorar mis habilidades en áreas clave como inteligencia artificial, automatización y desarrollo de nuevas tecnologías que generen impacto en el mundo empresarial.
+  </p>
+</div>
+
+
+  <!-- Tarjetas individuales de proyectos -->
+  <div class="proyectos-educativos">
+    <div class="card">
+      <h3>Proyecto 1</h3>
+      <p>Formulario en linea para matematicas.</p>
+      <a href="formulario.html" target="_blank">Ir al sitio</a>
+    </div>
+
+    <div class="card">
+      <h3>Proyecto 2</h3>
+      <p>Mi primer Sitio web para construir identidad personal.</p>
+      <a href="nueva pagina.html" target="_blank">Ir al sitio</a>
+    </div>
+
+    <div class="card">
+      <h3>Proyecto 3</h3>
+      <p>Landing page de un restaurante profesional.</p>
+      <a href="restaurante.html" target="_blank">Ir al sitio</a>
+    </div>
+  </div>
+</section>
+
+ <section id="metas">
+  <h1 class="titulo-centrado">Mis Metas</h1>
+
+  <div class="texto-metas">
+    <p>
+      En NeuroNet estamos trabajando junto a Google para construir un futuro donde la tecnología potencie a los empresarios de todo el mundo. Nuestra misión es brindar soluciones de alto nivel: desarrollo de apps, páginas web, automatizaciones, chatbots inteligentes y sistemas que eleven a las empresas con el poder de la inteligencia artificial.
+    </p>
+    <br> <!-- Salto de línea adicional -->
+    <p>
+      Nuestra meta es clara: llevar NeuroNet a lo más alto. Estamos preparando nuestra expansión a Irlanda, donde estableceremos un puente internacional que conecte a emprendedores con herramientas avanzadas y con una comunidad global. Queremos que cada empresario que confíe en nosotros reciba el mejor respaldo tecnológico para crecer, competir y triunfar.
+    </p>
+  </div>
+
+
+  <!-- Galería de imágenes -->
+  <div class="galeria-metas">
+    <img src="IMG_2959.jpg" alt="Imagen 1 - Meta" />
+    <img src="googleee.jpeg" alt="Imagen 2 - Meta" />
+    <img src="irlanda.jpg" alt="Imagen 3 - Meta" /> 
+  </div>
+  <p class="frase-final">Keep moving forward</p>
+</section>
+>
+<section id="intereses">
+  <h1 class="titulo-centrado">Mis Intereses</h1>
+  <p class="frase-intereses">Las cosas que me apasionan construyen la persona en la que me estoy convirtiendo.</p>
+
+  <div class="intereses-grid">
+    <div class="interes-card">
+      <img src="tec.jpg" alt="Tecnología e Innovación">
+      <h3>Tecnología e Innovación</h3>
+      <p>
+        Me apasiona crear soluciones que transformen la vida de las personas. Desde el desarrollo de inteligencia artificial hasta la automatización de procesos, encuentro belleza en construir el futuro.
+      </p>
+    </div>
+
+    <div class="interes-card">
+      <img src="espiri.jpg" alt="Espiritualidad y Conciencia">
+      <h3>Espiritualidad y Conciencia</h3>
+      <p>
+        Creo profundamente en el equilibrio entre mente, cuerpo y alma. Me interesa la metafísica, la sabiduría ancestral y la búsqueda de propósito a través de la introspección y el crecimiento espiritual.
+      </p>
+    </div>
+
+    <div class="interes-card">
+      <img src="viaje.jpg" alt="Cultura y Viajes">
+      <h3>Cultura y Viajes</h3>
+      <p>
+        Amo conocer nuevas realidades, idiomas y formas de ver el mundo. Viajar me conecta con la humanidad y me inspira a crear con una perspectiva más amplia y compasiva.
+      </p>
+    </div>
+  </div>
+</section>
+<section id="habilidades">
+  <h1 class="titulo-centrado">Mis Habilidades</h1>
+  <p class="frase-habilidad">No soy solo un desarrollador. Soy una combinación precisa de creatividad, lógica y visión estratégica.</p>
+
+  <div class="sistema-habilidades">
+    <div class="modulo">
+      <h3>Frontend Dev</h3>
+      <div class="barra-progreso"><div style="width: 90%"></div></div>
+      <p class="descripcion-habilidad">HTML, CSS, JS, UI responsive, animaciones, diseño web moderno.</p>
+    </div>
+
+    <div class="modulo">
+      <h3>Automatización IA</h3>
+      <div class="barra-progreso"><div style="width: 80%"></div></div>
+      <p class="descripcion-habilidad">Uso de agentes inteligentes, chatbots, sistemas conectados y IA aplicada.</p>
+    </div>
+
+    <div class="modulo">
+      <h3>Backend / Lógica</h3>
+      <div class="barra-progreso"><div style="width: 70%"></div></div>
+      <p class="descripcion-habilidad">APIs, Firebase, lógica de base de datos, flujos y estructura de software.</p>
+    </div>
+
+    <div class="modulo">
+      <h3>Product Thinking</h3>
+      <div class="barra-progreso"><div style="width: 85%"></div></div>
+      <p class="descripcion-habilidad">Entender la necesidad, diseñar una solución y convertirla en valor real.</p>
+    </div>
+
+    <div class="modulo">
+      <h3>Storytelling Visual</h3>
+      <div class="barra-progreso"><div style="width: 75%"></div></div>
+      <p class="descripcion-habilidad">Contar ideas con diseño, emoción y estructura visual convincente.</p>
+    </div>
+
+    <div class="modulo">
+      <h3>Espíritu Emprendedor</h3>
+      <div class="barra-progreso"><div style="width: 100%"></div></div>
+      <p class="descripcion-habilidad">Liderazgo, mentalidad de crecimiento, fuego interno y visión de impacto global.</p>
+    </div>
+  </div>
+</section>
+
+    </main>
+  </div>
+</body>
+</html>

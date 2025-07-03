@@ -1,0 +1,496 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #798873
+}
+
+/* Contenedor general */
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Nav bar lateral derecha */
+.sidebar {
+  width: 250px;
+  background-color: #7C4A44; /* Rojo Terracota */
+  color: #fff;
+  padding: 20px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  box-shadow: -2px 0 5px rgba(0,0,0,0.2);
+}
+
+.sidebar h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #fff;
+  text-align: center;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin: 15px 0;
+}
+
+.sidebar ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  display: block;
+  padding: 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.sidebar ul li a:hover {
+  background-color: #A55242; /* Naranja profundo */
+}
+
+/* Contenido principal */
+.content {
+  flex: 1;
+  margin-right: 250px; /* deja espacio para el nav derecho */
+  padding: 40px;
+}
+
+/* Secciones */
+section {
+  margin-bottom: 60px;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #A8A9A4; /* Gris claro */
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* Estilo de la sección principal "quién soy" */
+.hero-section {
+  text-align: center;
+}
+
+.perfil-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #7C6D68; /* Verde Grisáceo */
+  margin-bottom: 15px;
+}
+
+.subtitulo {
+  font-size: 1.2rem;
+  color: #D65641; /* Rojo coral */
+  margin-bottom: 15px;
+}
+
+.descripcion {
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.6;
+}.hero-section {
+  text-align: center;
+  background-color: #ffffff;
+  border: 2px solid #A8A9A4;
+  border-radius: 16px;
+  padding: 40px 30px;
+  margin-bottom: 50px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.header-info h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.subtitulo {
+  font-size: 1.4rem;
+  color: #A55242;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+.descripcion.mejorada {
+  font-family: 'Georgia', serif;
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.8;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: justify;
+}
+
+.perfil-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #7C6D68;
+  margin-bottom: 20px;
+}
+
+/* Animación fadeUp */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    box-shadow: none;
+  }
+
+  .content {
+    margin-right: 0;
+  }
+}
+main section {
+  display: none;
+}
+/* Animación de entrada tipo fade */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Efecto de deslizamiento suave hacia arriba */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Estilo que se aplica al mostrar una sección */
+section.visible {
+  display: block !important;
+  animation: fadeIn 0.6s ease-in-out;
+}
+#header-inicial {
+  background-color: #D65641; /* Rojo coral */
+  color: #fff;
+  padding: 30px;
+  text-align: normal;
+  font-size: 2rem;
+  font-weight: bold;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+  animation: fadeIn 0.8s ease-in-out;
+}
+/* Tarjeta grande de educación */
+.card-educacion {
+  background-color: #fff;
+  border: 2px solid #A8A9A4;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  animation: fadeIn 0.6s ease-in-out;
+}
+.card-educacion.pro {
+  background-color: #ffffff;
+  border: 2px solid #A8A9A4;
+  border-radius: 16px;
+  padding: 35px 30px;
+  margin-bottom: 40px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+  animation: fadeIn 1s ease-in-out;
+  transition: transform 0.4s ease;
+}
+
+.card-educacion.pro:hover {
+  transform: translateY(-5px);
+}
+
+.card-educacion.pro h2 {
+  color: #7C4A44;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.texto-educacion {
+  font-family: 'Georgia', serif;
+  font-size: 1.05rem;
+  color: #333;
+  text-align: justify;
+  line-height: 1.9;
+  max-width: 900px;
+  margin: 0 auto;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.texto-educacion strong {
+  color: #A55242;
+}
+
+.card-educacion h2 {
+  color: #7C4A44;
+  margin-bottom: 15px;
+}
+
+.card-educacion p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Cards de proyectos */
+.proyectos-educativos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.card {
+  flex: 1 1 30%;
+  background-color: #fff;
+  border: 2px solid #A8A9A4;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  text-align: center;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  color: #7C4A44;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.card a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #D65641;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.card a:hover {
+  color: #A55242;
+}
+#educacion h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.texto-metas.mejorada {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.97rem;
+  color: #333;
+  line-height: 1.9;
+  text-align: justify;
+  background-color: #ffffff;
+  border: 2px solid #A8A9A4;
+  border-radius: 14px;
+  padding: 30px;
+  margin-bottom: 40px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+  animation: fadeIn 1s ease-in-out;
+  transition: all 0.4s ease;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.texto-metas.mejorada p + p {
+  margin-top: 20px;
+}
+
+/* Galería de imágenes al final */
+.galeria-metas {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.galeria-metas img {
+  width: 30%;
+  max-width: 300px;
+  border-radius: 10px;
+  border: 2px solid #A8A9A4;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.galeria-metas img:hover {
+  transform: scale(1.03);
+}
+.titulo-centrado {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.frase-final {
+  text-align: center;
+  font-family: 'Georgia', serif;
+  font-style: italic;
+  font-size: 1.2rem;
+  color: #A55242; /* Naranja profundo */
+  margin-top: 20px;
+  animation: fadeIn 0.6s ease-in-out;
+}
+.frase-final {
+  text-align: center;
+  font-style: italic;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.05rem;
+  color: #A55242;
+  margin-top: 25px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.frase-intereses {
+  text-align: center;
+  font-style: italic;
+  font-size: 1.15rem;
+  color: #A55242;
+  margin-bottom: 40px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  animation: fadeIn 0.7s ease-in-out;
+}
+
+.intereses-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.interes-card {
+  background-color: #fff;
+  border: 2px solid #A8A9A4;
+  border-radius: 14px;
+  width: 300px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.07);
+  transition: transform 0.3s ease;
+  animation: fadeIn 0.7s ease-in-out;
+  text-align: center;
+}
+
+.interes-card:hover {
+  transform: translateY(-6px);
+}
+
+.interes-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.interes-card h3 {
+  color: #7C4A44;
+  margin-bottom: 10px;
+}
+
+.interes-card p {
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.6;
+}
+.frase-habilidad {
+  text-align: center;
+  font-size: 1.15rem;
+  color: #A55242;
+  font-style: italic;
+  margin-bottom: 40px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  animation: fadeIn 0.7s ease-in-out;
+}
+
+.sistema-habilidades {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.modulo {
+  background-color: #fff;
+  border: 2px solid #A8A9A4;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.07);
+  transition: transform 0.3s ease;
+  animation: fadeIn 0.7s ease-in-out;
+}
+
+.modulo:hover {
+  transform: translateY(-6px);
+}
+
+.modulo h3 {
+  color: #7C4A44;
+  margin-bottom: 10px;
+}
+
+.barra-progreso {
+  background-color: #A8A9A4;
+  height: 10px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+
+.barra-progreso div {
+  height: 100%;
+  background-color: #A55242;
+  border-radius: 10px;
+  animation: cargar 1.2s ease-in-out forwards;
+}
+
+.descripcion-habilidad {
+  font-size: 0.95rem;
+  color: #333;
+  font-family: 'Courier New', monospace;
+}
+
+@keyframes cargar {
+  from {
+    width: 0;
+  }
+}
